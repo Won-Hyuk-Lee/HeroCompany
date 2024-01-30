@@ -1,13 +1,21 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Hero
+public abstract class Hero : MonoBehaviour
 {
-    protected string name;
+    //protected string name;
     protected float upgradeCost;
+    protected int heroLevel;
+    protected float getMoney;
+    protected float money;
+
+
 
     protected abstract void Upgrade();
 
-    protected abstract void earnMoney();
+    protected abstract void ShowUI();
+
+    protected abstract void OpenHero();
+
+    protected abstract IEnumerator EarnMoney();
 }

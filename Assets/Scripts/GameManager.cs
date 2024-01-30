@@ -33,26 +33,10 @@ public class GameManager : MonoBehaviour
     */
 
     #region 지역변수
-    public int money = 0;
-    public int earnMoneyGradeA = 1;
-
-    public bool grade1 = true;
+   
 
     #endregion
 
-    #region 코루틴
-    IEnumerator EarnMoneyCoroutineA()
-    {
-        while (true)
-        {
-            // Wait for one second
-            yield return new WaitForSeconds(1.0f);
-
-            // Earn money
-            money += earnMoneyGradeA;
-        }
-    }
-    #endregion
 
     private void Awake()
     {
@@ -80,13 +64,12 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(EarnMoneyCoroutineA());
+        
     }
 
     private void Update()
     {
-        //UI에 돈 업데이트 표시
-        Debug.Log("미니고냐");
+        
     }
 
 }
