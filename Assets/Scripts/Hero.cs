@@ -13,8 +13,6 @@ public abstract class Hero : MonoBehaviour
 
     protected abstract void Upgrade();
 
-    protected abstract void ShowUI();
-
     protected abstract void OpenHero();
 
     protected abstract IEnumerator EarnMoney();

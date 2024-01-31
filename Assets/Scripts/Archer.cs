@@ -1,27 +1,26 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class Warrior : Hero
+public class Archer : Hero
 {
-    //private void Awake()
-    //{
-    //    OpenHero();
-    //}
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
 
-    //private void Update()
-    //{
-    //    if (Input.GetKeyDown(KeyCode.A))
-    //    {
-    //        Upgrade();
-    //    }
-    //    text.text = money.ToString("F2");
-    //}
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 
     protected override void Upgrade()
     {
         money -= upgradeCost;
-        upgradeCost *= 1.07f;
-        getMoney++;
+        upgradeCost *= 1.15f;
+        getMoney+=60;
     }
 
     protected override IEnumerator EarnMoney()
@@ -42,10 +41,8 @@ public class Warrior : Hero
     protected override void OpenHero()
     {
         heroLevel = 1;
-        getMoney = 1;
-        upgradeCost = 4;
+        getMoney = 60;
+        upgradeCost = 74.75f;
         StartCoroutine(EarnMoney());
     }
-
-
 }
